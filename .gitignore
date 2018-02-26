@@ -1,0 +1,4 @@
+_site
+.settings
+.sass-cache
+.vscode
