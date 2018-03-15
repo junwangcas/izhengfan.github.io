@@ -156,3 +156,82 @@ For example, the `zz` command redraws the screeen with the current line in the m
 The _expression register_ allows us to perform calculations directly. It is addressed by the `=` symbol. 
 
 In Insert mode, `<C-r>=`6*35`<CR>` will insert 210 directly in the text.
+
+
+### Tip 17: Insert Unusual Characters by Character Code 
+
+In Insert mode, `<C-v>{code}` can input the character whose addresss is {code}. 
+
+`<C-v>u{00bf}` will insert the character whose unicode address is 00bf. It should be a four-digit hexadecimal code.
+
+`ga` outputs a message showing the address of the character under cursor.
+
+| Keystrokes            | Effect                                                   |
+|-----------------------|----------------------------------------------------------|
+| `<C-v>{123}`          | insert character by decimal code                         |
+| `<C-v>u{1234}`        | insert character by hexadecimal code                     |
+| `<C-v>{nondigit}`     | insert nondigit literally                                |
+| `<C-k>{char1}{char2}` | insert character represented by `{char1}{char2}` digraph |
+
+### Tip 18: Insert Unusual Characters by Digraph
+
+`<C-k>?I`: the ¿ character.
+
+`<C-k>12`: the ½ character.
+
+`<C-k>>>`: the » character.
+
+`<C-k>sa`: the さ character.
+
+Get help by `:h digraphs-default` or `:h digraph-table`.
+
+
+### Tip 19: Overwrite Existing Text with Replace Mode
+
+In Normal mode, `R` triger Replace mode.
+
+In Insert mode, the `<Insert>` key in common keyboards can toggle between Insert and Replace mode. 
+
+`gR` triggers _Virtual Replace mode_, which treats the tab character as though it consisted of spaces.
+
+`r` `gr` provide the single-shot versions of Replace and Virtual Replace mode.
+
+## Chap Four - Visual Mode
+
+### Tip 20: Grok Visual Mode
+
+Commands that work the same as Normal mode in Visual:
+
+- `h` `j` `k` `l` to move cursor
+- `f{char}` to jump to a character 
+- `;` `,` to repeat or reverse the jump by `f{char}`
+- search commmands (together with `n`/`N`) to jump to pattern matches
+- `c` to change text and go into Insert mode (after selection)
+
+### Tip 21: Define a Visual Selection
+
+__Enable Visual mode from Normal mode__
+
+| Command | Effect                             |
+|---------|------------------------------------|
+| `v`     | enable character-wise Visual mode  |
+| `V`     | enable line-wise Visual mode       |
+| `<C-v>` | enable block-wise Visual mode      |
+| `gv`    | reselect the last visual selection |
+
+__Switching between Visual modes__
+
+| Command         | Effect                                                                                           |
+|-----------------|--------------------------------------------------------------------------------------------------|
+| `<Esc>`/`<C-[>` | switch to Normal mode                                                                            |
+| `v`/`V`/`<C-v>` | switch to Normal mode (when used from character-, line-, or block-wise Visual mode, respectively |
+| `v`             | switch to character-wise Visual mode                                                             |
+| `V`             | switch to line-wise Visual mode                                                                  |
+| `<C-v>`         | switch to block-wise Visual mode                                                                 |
+| `o`             | go to the other end of highlighted text                                                          |
+
+### Tip 22: Repeat Line-Wise Visual Commands
+
+
+
+
