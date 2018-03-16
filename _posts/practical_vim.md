@@ -160,7 +160,7 @@ In Insert mode, `<C-r>=`6*35`<CR>` will insert 210 directly in the text.
 
 ### Tip 17: Insert Unusual Characters by Character Code 
 
-In Insert mode, `<C-v>{code}` can input the character whose addresss is {code}. 
+In Insert mode, `<C-v>{code}` can input the character whose address is {code}. 
 
 `<C-v>u{00bf}` will insert the character whose unicode address is 00bf. It should be a four-digit hexadecimal code.
 
@@ -205,7 +205,7 @@ Commands that work the same as Normal mode in Visual:
 - `h` `j` `k` `l` to move cursor
 - `f{char}` to jump to a character 
 - `;` `,` to repeat or reverse the jump by `f{char}`
-- search commmands (together with `n`/`N`) to jump to pattern matches
+- search commands (together with `n`/`N`) to jump to pattern matches
 - `c` to change text and go into Insert mode (after selection)
 
 ### Tip 21: Define a Visual Selection
@@ -221,14 +221,14 @@ __Enable Visual mode from Normal mode__
 
 __Switching between Visual modes__
 
-| Command         | Effect                                                                                           |
-|-----------------|--------------------------------------------------------------------------------------------------|
-| `<Esc>`/`<C-[>` | switch to Normal mode                                                                            |
+| Command         | Effect                                  |
+|-----------------|-----------------------------------------|
+| `<Esc>`/`<C-[>` | switch to Normal mode                   |
 | `v`/`V`/`<C-v>` | switch to Normal mode (when used from character-, line-, or block-wise Visual mode, respectively |
-| `v`             | switch to character-wise Visual mode                                                             |
-| `V`             | switch to line-wise Visual mode                                                                  |
-| `<C-v>`         | switch to block-wise Visual mode                                                                 |
-| `o`             | go to the other end of highlighted text                                                          |
+| `v`             | switch to character-wise Visual mode    |
+| `V`             | switch to line-wise Visual mode         |
+| `<C-v>`         | switch to block-wise Visual mode        |
+| `o`             | go to the other end of highlighted text |
 
 ### Tip 22: Repeat Line-Wise Visual Commands
 
@@ -314,3 +314,24 @@ Visual-Block mode is not limited to _rectangular_ regions.
 Note: in Visual-Block mode, `I` or `A` places the cursor at the start or end of the _selection_.
 
 ## Chap Five - Command-Line Mode
+
+Vim traces its ancestry back to vi; vi traces its ancestry back to a line editor called ex, which is why we have Ex commands.
+
+### Tip 27: Meet Command Line
+
+`:` to get into Command-Line mode.
+
+| Command                                       | Effect                                                                          |
+|-----------------------------------------------|---------------------------------------------------------------------------------|
+| :[range]delete [x]                            | delete specified lines [into register x]                                        |
+| :[range]yank [x]                              | yank specified lines [into register x]                                          |
+| :[line]put [x]                                | put the text from register x after the specified line                           |
+| :[range]copy {address}                        | copy the specified lines to below the line specified by {address}               |
+| :[range]move {address}                        | move the specified lines to below the line specified by {address}               |
+| :[range]join                                  | join the specified lines                                                        |
+| :[range]normal {commands}                     | execute Normal mode {commands} on each specified line                           |
+| :[range]substitute/{pattern}/{string}/[flags] | replace occurrences of {pattern} with {string} on each specified line           |
+| :[range]global/{pattern}/[cmd]                | execute the Ex command [cmd] on all specified lines where the {pattern} matches |
+
+`<C-v>` `<C-k>` `<C-r>{register}` work in Command-Line mode like in Insert mode.
+
