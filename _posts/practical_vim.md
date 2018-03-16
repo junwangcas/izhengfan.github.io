@@ -232,6 +232,85 @@ __Switching between Visual modes__
 
 ### Tip 22: Repeat Line-Wise Visual Commands
 
+To make the `<` `>` commands work properly:
+
+```
+:set shiftwidth=4 softtabstop=4 expandtab
+```
+
+`Vj`: select two lines
+
+`>.`/`2>`: indent the selected lines twice. If over shoot, `u` can undo it.
+
+### Tip 23: Prefer Operators to Visual Commands Where Possible
+
+Suppose we have the 3 html lines below, and would like to make the 3 words inside the tags uppercase:
 
 
+```html
+<a href="#">one</a>
+<a href="#">two</a>
+<a href="#">three</a>
+```
 
+__Using a Visual Operator__
+
+1. `vit` to _visually_ select _inside_ the _tag_;
+2. `U` to convert the selected characters to uppercase;
+3. `j.` to repeat the above operations in the next line.
+
+However, this set of commands will give such results:
+
+```html
+<a href="#">ONE</a>
+<a href="#">TWO</a>
+<a href="#">THRee</a>
+```
+
+A repeated Visual command affects the same range of text (in this case, only three characters).
+
+__Using a Normal Operator__
+
+`gUit` `j.` `j.` give good results:
+
+```html
+<a href="#">ONE</a>
+<a href="#">TWO</a>
+<a href="#">THREE</a>
+```
+
+### Tip 24: Edit Tabular Data with Visual-Block Mode
+
+| Keystrokes | Meanings                                          |
+|------------|---------------------------------------------------|
+| `<C-v>3j`  | select a vertical column in 4 lines               |
+| `x...`     | delete that column; delete 3 more columns         |
+| `gv`       | reselect the last visually selected column        |
+| `r\|`      | replace each character in that column with `\|`   |
+| `yyp`      | duplicate a line                                  |
+| `Vr-`      | trigger line-wise Visual mode, and replace every character in that line with `-` |
+
+### Tip 25: Change Columns of Text
+
+Use Visual-Block mode to insert text into several lines simultaneously.
+
+| Keystrokes | Meanings |
+| --- | --- | 
+| `<C-v>jje` | trigger Visual-Block mode, select blocks across three lines, whose width decided by the word in the 3rd line |
+| `c` | delete the selected text; into Insert mode |
+| {text} | insert {text}; only changes of the topmost line can be seen |
+| `<Esc>` | back to Normal mode, changes in all lines can be seen |
+
+### Tip 26: Append After a Ragged Visual Block
+
+Visual-Block mode is not limited to _rectangular_ regions.
+
+| Keystrokes | Meanings |
+| --- | --- | 
+| `<C-v>jj$` | trigger Visual-Block mode; select across 3 lines, all until the end of lines |
+| `A;` | append `;` in the end; only changes in the topmost line can be seen |
+| `<Esc>` | back to Normal mode, changes in all lines can be seen |
+
+Note: in Visual-Block mode, `I` or `A` places the cursor at the start or end of the _selection_.
+
+## Chap Five - Command-Line Mode
