@@ -294,22 +294,22 @@ __Using a Normal Operator__
 
 Use Visual-Block mode to insert text into several lines simultaneously.
 
-| Keystrokes | Meanings |
-| --- | --- | 
+| Keystrokes | Meanings                                                    |
+|------------|-------------------------------------------------------------|
 | `<C-v>jje` | trigger Visual-Block mode, select blocks across three lines, whose width decided by the word in the 3rd line |
-| `c` | delete the selected text; into Insert mode |
-| {text} | insert {text}; only changes of the topmost line can be seen |
-| `<Esc>` | back to Normal mode, changes in all lines can be seen |
+| `c`        | delete the selected text; into Insert mode                  |
+| {text}     | insert {text}; only changes of the topmost line can be seen |
+| `<Esc>`    | back to Normal mode, changes in all lines can be seen       |
 
 ### Tip 26: Append After a Ragged Visual Block
 
 Visual-Block mode is not limited to _rectangular_ regions.
 
-| Keystrokes | Meanings |
-| --- | --- | 
+| Keystrokes | Meanings                                                                     |
+|------------|------------------------------------------------------------------------------|
 | `<C-v>jj$` | trigger Visual-Block mode; select across 3 lines, all until the end of lines |
-| `A;` | append `;` in the end; only changes in the topmost line can be seen |
-| `<Esc>` | back to Normal mode, changes in all lines can be seen |
+| `A;`       | append `;` in the end; only changes in the topmost line can be seen          |
+| `<Esc>`    | back to Normal mode, changes in all lines can be seen                        |
 
 Note: in Visual-Block mode, `I` or `A` places the cursor at the start or end of the _selection_.
 
