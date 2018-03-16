@@ -335,3 +335,112 @@ Vim traces its ancestry back to vi; vi traces its ancestry back to a line editor
 
 `<C-v>` `<C-k>` `<C-r>{register}` work in Command-Line mode like in Insert mode.
 
+### Tip 28: Execute a Command on One or More Consecutive Lines
+
+`:1`: specify line 1
+
+`:$`: specify the last line
+
+`:2,5p`: specify line 2 to line 5; and print them
+
+`:.`: specify the current line
+
+`:.,$p`: specify from the current line to the last line; and print them
+
+`:%`: specify the all lines in the current file
+
+`:%s/Pratical/Pragmatic/`: replace the first occurrence of "Practical" with "Pragmatic" on each line
+
+We can also use visaul selection to specify lines.
+
+`:/<html>/,/<\/html>/`: specify the range of lines beginning with a line containing `<html>` and ending with a line containing `</html>`.
+
+`:{address}+n`: specify by the address adding with an offset.
+
+`:/<html>/+1,/<\/html>/-1`: specify the range of lines, whose beginning line is one line below the line containing `<html>`, and whose ending line is one line above the line containing `</html>`.
+
+__Special addresses__:
+
+| Symbol | Address                                       |
+|--------|-----------------------------------------------|
+| 1      | first line of the file                        |
+| $      | last line of the file                         |
+| 0      | virtual line above the first line of the file |
+| .      | line where the cursor is placed               |
+| `'m`   | line containing mark `m`                      |
+| `'<`   | start of visual selection                     |
+| `'>`   | end of visual selection                       |
+| %      | the entire file (shorthand for `:1,$`)        |
+
+
+Here line 0 is useful in the `:copy {address}` or `:move {address}` commands when we want to copy or move a range of lines to the top of a file.
+
+### Tip 29: Duplicate or Move Lines Using `:t` and `:m` Commands
+
+`:copy` = `:co` = `:t`. Think of it as _copy TO_.
+
+| Command  | Effect                                                    |
+|----------|-----------------------------------------------------------|
+| :t6      | copy the current line to just below line 6                |
+| :t.      | duplicate the current line (similar to Normal mode `yyp`  |
+| :t$      | copy the current line to the end of the file              |
+| `:'<,'>t0` | copy the visually selected lines to the start of the file |
+
+`:move` = `:m`. It functions analogously to `:t`, but in 'move' rather than 'copy' way.
+
+### Tip 30: Run Normal Mode Command Across a Range
+
+Use `:normal` to run Normal mode command on a range of lines.
+
+`:'<,'>normal .`: for each line in the visual selection, execute the Normal mode dot command.
+
+`:%normal A;`: append a `;` at the end of every line of the file.
+
+`:%normal i//`: add `//` in the beginning of every line of the file.
+
+### Tip 31: Repeat the Last Ex Command 
+
+`@:`: repeat the last ex command.
+
+### Tip 32: Tab-Complete Ex Commands
+
+`<C-d>`: in Command mode, to reveal a list of possible completions
+
+`<Tab>`: cycle through the possible completions
+
+Customize the completion behaviors with the 'wildmode' option. `:h 'wildmode'` to get help.
+
+### Tip 33: Insert the Current Word at the Command Prompt
+
+`<C-r><C-w>` copies the word under the cursor and inserts it at the command line prompt.
+
+### Tip 34: Recall Commands from History
+
+Use up arrow key to get the previous command; down arrow in the opposite direction.
+
+Arrow keys can be avoided for recalling command history, by custom mappings:
+
+```
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+```
+
+`:write | !python %`: join the commands `:write` and `:!python %`
+
+`q:` in Normal mode to meet the Command-Line window.
+
+| Command | Action                                                   |
+|---------|----------------------------------------------------------|
+| `q/`    | open the command-line window with history of searches    |
+| `q:`    | open the command-line window with history of Ex commands |
+| `<C-f>` | switch from Command-Line mode to the command-line window |
+
+### Tip 35: Run Command in the Shell 
+
+`:!python %`: execute the current file using python
+
+`:shell`: hang the current Vim session, into a shell interface
+
+`$ exit`: exit the shell and back to Vim
+
+If we already run Vim in Bash, `<C-z>` in Vim and `fg` in Bash achieve the same function as `:shell` in Vim and `exit` in shell.
