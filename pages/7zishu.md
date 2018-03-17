@@ -1,5 +1,5 @@
 ---
-layout: cnpage
+layout: cndefault
 permalink: /zishu/
 ---
 

@@ -17,7 +17,6 @@ title: 无求备斋笔记
 </p>
 ---
 
-<article>
 <table>
 {% for post in site.categories.cn %}
 <tr id="blog-table">
@@ -26,6 +25,5 @@ title: 无求备斋笔记
 </tr>
 {% endfor %}
 </table>
-</article>
 <hr>
 <p>博文<a href="/cnarchive">归档</a></p>

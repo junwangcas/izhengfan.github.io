@@ -11,7 +11,6 @@ A researcher on robotics and computer vision. Interested in programming and typo
 
 <p style="margin-top:1.2em;margin-bottom:0;"><b>Blogs</b> | Browse by <a href="/archive#tags">Tags</a></p>
 <hr>
-<article>
 <table>
 {% for post in site.categories.en %}
 <tr id="blog-table">
@@ -20,6 +19,5 @@ A researcher on robotics and computer vision. Interested in programming and typo
 </tr>
 {% endfor %}
 </table>
-</article>
 <hr>
 <p>All posts <a href="/archive">archived</a></p>

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Archive (Chinese Posts Included)
 permalink: /archive/
 ---
