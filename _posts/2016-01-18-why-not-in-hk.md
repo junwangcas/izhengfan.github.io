@@ -19,4 +19,4 @@ tags: 杂谈
 
 我觉得贵地的科研基金委员会呀，新闻工作者呀，都有点 simple，还需要再学习一个。
 
-参考：[另一片海](http://book.douban.com/subject/25908569/)
+参考：[另一片海](https://book.douban.com/subject/25908569/)
