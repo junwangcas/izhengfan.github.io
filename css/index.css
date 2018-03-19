@@ -105,7 +105,7 @@ iframe, #embed-video{
 }
 
 code.highlighter-rouge {
-  background: #eee;
+  background: #e5e5e5;
   padding-right: 3px;
   padding-left: 3px;
   border-radius: 2px;
@@ -116,18 +116,13 @@ table {
 table tbody tr td{
   padding-right: 0.5em;
 }
-article table tbody tr td{
-  padding-right: 0.5em;
-  padding-left: 0.2em;
+article table thead tr th, article table tbody tr td{
+  padding-right: 0.3em;
+  padding-left: 0.3em;
+  border: 1px solid #dddddd;
 }
 
 article tr:nth-child(even){background-color: #f6f8f8;}
-article tr:nth-child(even) code.highlighter-rouge {
-    background: #e5e5e5;
-    padding-right: 3px;
-    padding-left: 3px;
-    border-radius: 2px;
-}
 
 .tag{
   padding: 0.1em 0.6em;
