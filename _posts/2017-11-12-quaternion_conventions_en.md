@@ -22,7 +22,7 @@ The co-existence of two conventions for quaternions is still confusing for me. Q
 
 One thing for sure, the co-existence of two conventions has resulted in some confusion and arguments among researchers. 
 
-For instance, oddly enough, although the _Quaternion_ entry in Wikipedia uses Hamilton, and the _Quaternions and spatial rotation_ entry [\[3\]](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation) uses Hamilton too, the _Conversion between quaternions and Euler angles_ entry [\[4\]](https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles), on the contrary, uses JPL (well, after confirmation, it just claims to use JPL, but still uses Hamilton throughout the equations...). I have to say, inconsistency and impreciseness and is a major weakness of free encyclopedias that everyone can edit like Wikipedia.
+For instance, oddly enough, although the _Quaternion_ entry in Wikipedia uses Hamilton, and the _Quaternions and spatial rotation_ entry [\[3\]](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation) uses Hamilton too, the _Conversion between quaternions and Euler angles_ entry [\[4\]](https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles), on the contrary, uses JPL. I have to say, inconsistency and impreciseness and is a major weakness of free encyclopedias that everyone can edit like Wikipedia.
 
 Nicolas Rotella also mentioned this problem in his report [\[5\]](http://www-clmc.usc.edu/~nrotella/IROS2014_linearization.pdf), and complained that "unfortunately, the quaternion algebra used in these conventions is often mixed up in the literature". He finally chose JPL.
 
@@ -35,6 +35,9 @@ It seems Hamilton receives more favor from their group.
 In another report _Quaternion kinematics for the error-state KF_ [\[6\]](http://www.iri.upc.edu/people/jsola/JoanSola/objectes/notes/kinematics.pdf), Joan Sola also voted for Hamilton.
 
 My personal opinion: the current situation of two quaternion conventions co-existing is awful. I cannot understand what is the necessity of proposing another notation when there is Hamilton convention well used. ~~I know you guys from JPL (the lab) are amazing in creation and engineering, but arbitrarily introducing new standards is evil~~. In current situation, Any reliable material should at least point out the convention they use at the beginning. From a realistic point of view, the widely used linear algebra library Eigen uses Hamilton; Matlab uses Hamilton ([MathWorks: Quaternion](https://www.mathworks.com/discovery/quaternion.html)); ROS, Google Ceres Solver use Hamilton; let's use Hamilton to avoid any chaos in our development work. ~~JPL to hell~~.
+
+__Updated 2018-03-19__: As for the Wikipedia entry \[4\], after confirmation, it actually just claims to use JPL, but still uses Hamilton throughout the equations... Don't know why someone just added this mismatched claim. Thanks to [Hannes](https://github.com/HannesSommer) for reminding me of this case.
+
 
 ### References:
 
