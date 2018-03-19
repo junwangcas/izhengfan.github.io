@@ -22,7 +22,7 @@ The co-existence of two conventions for quaternions is still confusing for me. Q
 
 One thing for sure, the co-existence of two conventions has resulted in some confusion and arguments among researchers. 
 
-For instance, oddly enough, although the _Quaternion_ entry in Wikipedia uses Hamilton, and the _Quaternions and spatial rotation_ entry [\[3\]](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation) uses Hamilton too, the _Conversion between quaternions and Euler angles_ entry [\[4\]](https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles), on the contrary, uses JPL (well, after confirmation, it just claims to use JPL, but still uses Hamilton in all the equation...). I have to say, inconsistency and impreciseness and is a major weakness of free encyclopedias that everyone can edit like Wikipedia.
+For instance, oddly enough, although the _Quaternion_ entry in Wikipedia uses Hamilton, and the _Quaternions and spatial rotation_ entry [\[3\]](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation) uses Hamilton too, the _Conversion between quaternions and Euler angles_ entry [\[4\]](https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles), on the contrary, uses JPL (well, after confirmation, it just claims to use JPL, but still uses Hamilton throughout the equations...). I have to say, inconsistency and impreciseness and is a major weakness of free encyclopedias that everyone can edit like Wikipedia.
 
 Nicolas Rotella also mentioned this problem in his report [\[5\]](http://www-clmc.usc.edu/~nrotella/IROS2014_linearization.pdf), and complained that "unfortunately, the quaternion algebra used in these conventions is often mixed up in the literature". He finally chose JPL.
 
