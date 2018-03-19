@@ -105,9 +105,8 @@ iframe, #embed-video{
 }
 
 code.highlighter-rouge {
-  background: #e5e5e5;
-  padding-right: 3px;
-  padding-left: 3px;
+  background: #eee;
+  padding: 0.1rem 0.3rem;
   border-radius: 2px;
 }
 table {
@@ -122,7 +121,7 @@ article table thead tr th, article table tbody tr td{
   border: 1px solid #dddddd;
 }
 
-article tr:nth-child(even){background-color: #f6f8f8;}
+article tr:nth-child(even){background-color: #f7f9fb;}
 
 .tag{
   padding: 0.1em 0.6em;
