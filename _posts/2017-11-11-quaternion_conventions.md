@@ -40,7 +40,7 @@ Joan Sola 在另一篇报告 _Quaternion kinematics for the error-state KF_ [\[6
 我个人意见是，四元数存在两种 convention 的现状实在糟糕透顶，如果已经存在 Hamilton，大家都用得好好的，实在无法理解 JPL  提出一个新的标准到底有什么必要。~~嗯，你们 JPL 是很厉害，但另立标准、混淆视听实在是异端，烧死烧死！~~在当前情况下，任何一份可靠的材料，在使用四元数时至少都应明示使用哪种 convention。从现实的角度讲，Eigen 这种通用线性代数运算库用的是 Hamilton，Matlab 使用的是 Hamilton（[MathWorks: Quaternion](https://www.mathworks.com/discovery/quaternion.html)），ROS、Google Ceres Solver 也用的是 Hamilton， 那么大家还是尽量用 Hamilton，免除烦恼。~~愿异端 JPL 尽早进入历史的垃圾堆。~~
 
 
-__2018-03-19 更新__: 经查证，该维基百科条目 \[4\] 只是声称使用了 JPL，实际公式用的还是 Hamilton…… 不知道为什么会出现这种错误。感谢 [Hannes](https://github.com/HannesSommer) 向我指出了这个问题。
+__2018-03-19 更新__: 经查证，维基百科条目 \[4\] 只是声称使用了 JPL，实际公式用的还是 Hamilton…… 不知道为什么会出现这种错误。感谢 [Hannes](https://github.com/HannesSommer) 向我指出了这个问题。
 
 
 ### 参考文献:
