@@ -22,7 +22,7 @@ $$ {\bf R}=\begin{bmatrix} 1-2q_2^2-2q_3^2 & 2q_1q_2-2q_0q_3 & 2q_1q_3+2q_0q_2 \
 
 唯一可以确定的是，两种 convention 的存在，确实给学界造成了一些困惑或争论。
 
-比如，一件吊诡的事情就是，虽然维基百科的 quaternion 主条目使用了 Hamilton 风格的定义，Quaternions and spatial rotation 条目 [\[3\]](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation) 也用了 Hamilton，另一个四元数与其他旋转表示法相转换的条目里 [\[4\]](https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles) 却使用了 JPL 的定义。不能不说，混乱和不严谨不统一是维基百科这种大杂烩式的自由百科的缺点。
+比如，一件吊诡的事情就是，虽然维基百科的 quaternion 主条目使用了 Hamilton 风格的定义，Quaternions and spatial rotation 条目 [\[3\]](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation) 也用了 Hamilton，另一个四元数与其他旋转表示法相转换的条目里 [\[4\]](https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles) 却使用了 JPL 的定义（经查证，该条目只是声称使用了 JPL，实际公式用的还是 Hamilton……）。不能不说，混乱和不严谨不统一是维基百科这种大杂烩式的自由百科的缺点。
 
 学者 Nicolas Rotella 在一篇报告里也提到这个问题 [\[5\]](http://www-clmc.usc.edu/~nrotella/IROS2014_linearization.pdf)，对学界往往混用两种 convention 表示很心塞：“unfortunately, the quaternion algebra used in these conventions is often mixed up in the literature”。最后这个作者使用的是 JPL。
 
