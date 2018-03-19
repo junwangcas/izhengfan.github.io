@@ -1,3 +1,14 @@
+---
+layout: post
+title: "Practical Vim: Modes"
+date: 2018-03-17 01:00:00
+categories: en
+tags: Vim
+---
+
+* content
+{:toc}
+
 ## Chap One - The Vim Way
 
 ### Tip 1: Repeat with Dot Command
@@ -54,9 +65,12 @@ The Ideal: One Keystroke to Move, One Keystroke to Execute
 
 ### Tip 8: Chunk Your Undos
 
-`i{insert some text}<Esc>` constitutes a change that can be undone by a `u` stroke. Therefore, in Insert Mode, when openning a new line, try pressing `<Esc>o` instead of `<CR>` to keep the granularity in the change flow.
+`i{insert some text}<Esc>` constitutes a change that can be undone by a `u` stroke.
+Therefore, in Insert Mode, when openning a new line, try pressing `<Esc>o` instead of `<CR>` to keep the granularity in the change flow.
 
-__Special case:__ If we use the `<Up>`, `<Down>`, `<Left>`, or `<Right>` cursor keys while in Insert mode, a new undo chunk is created. It’s just as though we had switched back to Normal mode to move around with the `h`, `j`, `k`, or `l` commands, except that we don’t have to leave Insert mode. This also has implications on the operation of the dot command.
+__Special case:__ If we use the `<Up>`, `<Down>`, `<Left>`, or `<Right>` cursor keys while in Insert mode, a new undo chunk is created.
+It’s just as though we had switched back to Normal mode to move around with the `h`, `j`, `k`, or `l` commands, except that we don’t have to leave Insert mode.
+This also has implications on the operation of the dot command.
 
 ### Tip 9: Compose Repeatable changes
 
@@ -66,7 +80,8 @@ __Special case:__ If we use the `<Up>`, `<Down>`, `<Left>`, or `<Right>` cursor 
 
 ### Tip 10: Use Counts to Do Simple Arithmetic
 
-The `<C-a>` and `<C-x>` commands perform addition and subtraction on numbers (at or after the cursor). `18<C-a>` will add 18 to the number. When run without a count, they increment by one.
+The `<C-a>` and `<C-x>` commands perform addition and subtraction on numbers (at or after the cursor).
+`18<C-a>` will add 18 to the number. When run without a count, they increment by one.
 
 ### Tip 11: Count vs Repeat
 
@@ -94,7 +109,8 @@ The `d{motion}` commands can be like
 
 3. `dap` delete an entire paragraph
 
-The same goes for `c{motion}`, `y{motion}`, etc. Find a complete list of operators by `:h operator`. Some of them are:
+The same goes for `c{motion}`, `y{motion}`, etc. Find a complete list of operators by `:h operator`.
+Some of them are:
 
 | Trigger | Effect                                           |
 |---------|--------------------------------------------------|
@@ -141,15 +157,18 @@ These commands can also be used in Vim's command line as well as in the bash she
 | `<C-[>`    | to Normal mode        |
 | `<C-o>`    | to Insert Normal mode |
 
-Insert Normal mode is s special version of Normal mode. It allows one command to execute, after which it will return to Insert mode immediately.
+Insert Normal mode is s special version of Normal mode.
+It allows one command to execute, after which it will return to Insert mode immediately.
 
-For example, the `zz` command redraws the screeen with the current line in the middle of the window. Thus, in Insert mode, `<C-o>zz` helps to move our input flow into the middle of the window.
+For example, the `zz` command redraws the screeen with the current line in the middle of the window.
+Thus, in Insert mode, `<C-o>zz` helps to move our input flow into the middle of the window.
 
 ### Tip 15: Paste without Leaving Insert Mode
 
 `<C-r>{register}` paste those in {register} in Insert mode.
 
-`<C-r><C-p>{register}` is smarter, which inserts text literally and fixes any unintended indentation. But it's a bit of handful. When pasting a register containing  multiple lines of text, consider switching to Normal mode.
+`<C-r><C-p>{register}` is smarter, which inserts text literally and fixes any unintended indentation.
+But it's a bit of handful. When pasting a register containing  multiple lines of text, consider switching to Normal mode.
 
 ### Tip 16: Do Calculations in Place
 
@@ -162,7 +181,8 @@ In Insert mode, `<C-r>=`6*35`<CR>` will insert 210 directly in the text.
 
 In Insert mode, `<C-v>{code}` can input the character whose address is {code}. 
 
-`<C-v>u{00bf}` will insert the character whose unicode address is 00bf. It should be a four-digit hexadecimal code.
+`<C-v>u{00bf}` will insert the character whose unicode address is 00bf.
+It should be a four-digit hexadecimal code.
 
 `ga` outputs a message showing the address of the character under cursor.
 
@@ -444,3 +464,35 @@ cnoremap <C-n> <Down>
 `$ exit`: exit the shell and back to Vim
 
 If we already run Vim in Bash, `<C-z>` in Vim and `fg` in Bash achieve the same function as `:shell` in Vim and `exit` in shell.
+
+The position of `!` matters:
+
+- `:write !sh`: pass the contents of the buffer as input to the external `sh`
+- `:write ! sh`: same as above
+- `:write! sh`: write the contents of the buffer to a file called `sh` by calling the `:write!` command.
+
+__Filtering the Contents Through an External Command__
+
+Suppose we have a csv file:
+
+```
+first name,last name,email
+john,smith,john@example.com
+drew,neil,drew@vimcasts.org
+jane,doe,jane@example.com
+```
+
+We can sort the namelist by the last name using this command:
+
+`:2,$!sort -t',' -k2`
+
+Here `:2,$` specify the line range; `sort` is the external filtering command; the `-t','` option assigns that fields are separated with commas, and the `k2` flag indicates that the second field is to be used for the sort.
+
+| Command                | Effect                                                                       |
+|------------------------|------------------------------------------------------------------------------|
+| `:shell`               | start a shell (return to Vim by typing `exit`                                |
+| `:!{cmd}`              | execute `{cmd}` with the shell                                               |
+| `:read !{cmd}`         | execute `{cmd}` in the shell and insert its standard output below the cursor |
+| `:[range]write !{cmd}` | execute `{cmd}` in shell with `[range]` lines as standard input              |
+| `:[range]!{filter}`    | filter the specified `[range]` through external program `{filter}`           |
+
