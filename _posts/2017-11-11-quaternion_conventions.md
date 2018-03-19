@@ -22,7 +22,7 @@ $$ {\bf R}=\begin{bmatrix} 1-2q_2^2-2q_3^2 & 2q_1q_2-2q_0q_3 & 2q_1q_3+2q_0q_2 \
 
 唯一可以确定的是，两种 convention 的存在，确实给学界造成了一些困惑或争论。
 
-比如，一件吊诡的事情就是，虽然维基百科的 quaternion 主条目使用了 Hamilton 风格的定义，Quaternions and spatial rotation 条目 [\[3\]](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation) 也用了 Hamilton，另一个四元数与其他旋转表示法相转换的条目里 [\[4\]](https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles) 却使用了 JPL 的定义（经查证，该条目只是声称使用了 JPL，实际公式用的还是 Hamilton……）。不能不说，混乱和不严谨不统一是维基百科这种大杂烩式的自由百科的缺点。
+比如，一件吊诡的事情就是，虽然维基百科的 quaternion 主条目使用了 Hamilton 风格的定义，Quaternions and spatial rotation 条目 [\[3\]](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation) 也用了 Hamilton，另一个四元数与其他旋转表示法相转换的条目里 [\[4\]](https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles) 却使用了 JPL 的定义。不能不说，混乱和不严谨不统一是维基百科这种大杂烩式的自由百科的缺点。
 
 学者 Nicolas Rotella 在一篇报告里也提到这个问题 [\[5\]](http://www-clmc.usc.edu/~nrotella/IROS2014_linearization.pdf)，对学界往往混用两种 convention 表示很心塞：“unfortunately, the quaternion algebra used in these conventions is often mixed up in the literature”。最后这个作者使用的是 JPL。
 
@@ -38,6 +38,9 @@ Joan Sola 在另一篇报告 _Quaternion kinematics for the error-state KF_ [\[6
 
 
 我个人意见是，四元数存在两种 convention 的现状实在糟糕透顶，如果已经存在 Hamilton，大家都用得好好的，实在无法理解 JPL  提出一个新的标准到底有什么必要。~~嗯，你们 JPL 是很厉害，但另立标准、混淆视听实在是异端，烧死烧死！~~在当前情况下，任何一份可靠的材料，在使用四元数时至少都应明示使用哪种 convention。从现实的角度讲，Eigen 这种通用线性代数运算库用的是 Hamilton，Matlab 使用的是 Hamilton（[MathWorks: Quaternion](https://www.mathworks.com/discovery/quaternion.html)），ROS、Google Ceres Solver 也用的是 Hamilton， 那么大家还是尽量用 Hamilton，免除烦恼。~~愿异端 JPL 尽早进入历史的垃圾堆。~~
+
+
+__2018-03-19 更新__: 经查证，该维基百科条目 \[4\] 只是声称使用了 JPL，实际公式用的还是 Hamilton…… 不知道为什么会出现这种错误。感谢 [Hannes](https://github.com/HannesSommer) 向我指出了这个问题。
 
 
 ### 参考文献:
