@@ -196,3 +196,44 @@ In addition to `:Explore`, `:Sexplore` and `:Vexplore` open the file explorer in
 netrw can also create new files (`:h netrw-%`) or directories (`:h netrw-d`), rename existing ones (`:h netrw-rename`), or delete them (`:h netrw-del`).
 
 netrw can even read and write files across a network, using protocols including `scp` `ftp` `curl` and `wget`. Loop up `:h netrw-ref`.
+
+### Tip 44: Save Files to Nonexistent Directories
+
+Create a new file in a directory that does not exist:
+
+```
+:edit madeup/dir/doesnotexist.yet
+```
+
+Vim creates a buffer for it, but it cannot be saved directly with `:w`.
+In this case:
+
+```
+:!mkdir -p %:h
+:write
+```
+
+The `-p` flag tells the `mkdir` to create intermediate directories.
+
+### Tip 45: Save Files as the Super User
+
+Edit hosts as a common user:
+
+```
+$ vim /etc/hosts
+```
+
+Save the file without leaving Vim:
+
+```
+:w !sudo tee % > /dev/null
+```
+
+Although Vim is still running as a common user, by using `:write !{cmd}` we can run `{cmd}` in the external shell as the superuser.
+`%` in command-line mode represent the path of the current buffer. So the final part is actually `sudo tee /etc/hosts/ > /dev/null`.
+This command receives the contents of the buffer as standard input, using it to overwrite the contents of the `/etc/hosts` file.
+
+> The `> /dev/null` tail exists here because `tee`  writes to stdout AND a file, and we want to silence stdout.
+
+Additionally, Vim detectes that the file has been changed outside, so Vim will prompts us to choose whether to keep the version in the buffer or load the version on disk. 
+In this case, the file and the buffer happen to have the same contents.
