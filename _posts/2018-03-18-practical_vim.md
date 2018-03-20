@@ -299,7 +299,7 @@ __Using a Normal Operator__
 | `<C-v>3j`  | select a vertical column in 4 lines               |
 | `x...`     | delete that column; delete 3 more columns         |
 | `gv`       | reselect the last visually selected column        |
-| `r\|`      | replace each character in that column with `\|`   |
+| `r|`       | replace each character in that column with `|`    |
 | `yyp`      | duplicate a line                                  |
 | `Vr-`      | trigger line-wise Visual mode, and replace every character in that line with `-` |
 
