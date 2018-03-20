@@ -107,10 +107,12 @@ iframe, #embed-video{
 code.highlighter-rouge {
   background: #eee;
   padding: 0.1rem 0.3rem;
-  border-radius: 2px;
+  border-radius: 0.2em;
 }
 table {
   border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 table tbody tr td{
   padding-right: 0.5em;
@@ -118,10 +120,8 @@ table tbody tr td{
 article table thead tr th, article table tbody tr td{
   padding-right: 0.3em;
   padding-left: 0.3em;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
-
-article tr:nth-child(even){background-color: #f7f9fb;}
 
 .tag{
   padding: 0.1em 0.6em;
