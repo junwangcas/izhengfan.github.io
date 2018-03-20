@@ -34,8 +34,8 @@ In practice, `:argdo` may be more practical.
 Deleting buffers can be in one of these forms:
 
 ```
-:bdelete N1 N2 N3`
-:N,M bdelete`
+:bdelete N1 N2 N3
+:N,M bdelete
 ```
 
 `:bdelete` can be written as `:bd`.
@@ -68,3 +68,51 @@ Argument list is simpler to manage than Buffer list.
 - `:args {arglist}` can clear and repopulate the list with a single command
 - `:next` `:prev` can traverse the files in the list
 - `:argdo` can execute the same command on each buffer in the arg list
+
+### Tip 38: Manage Hidden Buffers
+
+| Command    | Effect                                                                         |
+|------------|--------------------------------------------------------------------------------|
+| `:w[rite]` | write the contents of the buffer to disk                                       |
+| `:e[dit]!` | read the file from disk back into the buffer (that is, revert unsaved changes) |
+| `:qa[ll]!` | close all windows, discarding changes without warning                          |
+| `:wa[ll]`  | write all modified buffers to disk                                             |
+
+Vim does not allow going to other items in Argument list until we save the changes in the current buffer. 
+If `hidden` setting is enabled, then we can use the `:next` `:bnext` `:cnext` commands without a trailing bang.
+If the active buffer is modified, Vim will automatically hide it when we navigate away from it.
+The `hidden` setting makes it possible to use `:argdo` and `:bufdo` to change a collection of buffers with a single command.
+
+### Tip 39: Divide Workspace into Split Windows
+
+| Command            | Effect                                                                              |
+|--------------------|-------------------------------------------------------------------------------------|
+| `<C-w>s`           | split the current window horizontally, reusing the current buffer in the new window |
+| `<C-w>v`           | split the current window vertically, reusing the current buffer in the new window   |
+| `:sp[lit] {file}`  | split the current window horizontally, loading `{file}` into the new window         |
+| `:vsp[lit] {file}` | split the current window vertically, loading `{file}` into the new window           |
+
+
+| Command  | Effect                        |
+|----------|-------------------------------|
+| `<C-w>w` | cycle between open windows    |
+| `<C-w>h` | focus the window to the left  |
+| `<C-w>j` | focus the window below        |
+| `<C-w>k` | focus the window above        |
+| `<C-w>l` | focus the window to the right |
+
+`<C-w><C-w>` does the same thing as `<C-w>w`; so as the other four in the above table.
+
+| Ex Command | Normal Command | Effect                                          |
+|------------|----------------|-------------------------------------------------|
+| `:cl`      | `<C-w>c`       | close the active window                         |
+| `:on[ly]`  | `<C-w>o`       | keep only the active window, closing all others |
+
+
+| Keystrokes  | Buffer Contents                          |
+|-------------|------------------------------------------|
+| `<C-w>=`    | equalize width and height of all windows |
+| `<C-w>_`    | maximize height of the active window     |
+| ` <C-w>\| ` | maximize width of the active window      |
+| `[N]<C-w>_` | set active window height to `[N]` rows   |
+| `[N]<C-w>\|`| set active window width to `[N]` columns |
