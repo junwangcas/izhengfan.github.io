@@ -172,3 +172,27 @@ The `**` wildcard matches all subdirectories beneath the `app/` directory.
 
 For the `path` setting, the treatment of `*` and `**` is slightly different (see `:h file-searching`) from _Populating the Argument List_.
 The wildcards are handled by Vim rather than by the shell.
+
+### Tip 43: Explore the File System with netrw
+
+netrw is a plugin, but comes as standard with the Vim distribution.
+The minimum requirement for `.vimrc` file to load plugins:
+
+```
+set nocompatible
+filetype plugin on
+```
+
+`$ vim .`: show the contents of current directory in a regular Vim buffer.
+Pressing `-` can open the parent directory.
+
+| Ex Command | Shorthand | Effect                                                    |
+|------------|-----------|-----------------------------------------------------------|
+| `:edit .`  | `:e.`     | open file explorer for current working directory          |
+| `:Explore` | `:E`      | open file explorer for the directory of the active buffer |
+
+In addition to `:Explore`, `:Sexplore` and `:Vexplore` open the file explorer in a horizontal or vertical split window.
+
+netrw can also create new files (`:h netrw-%`) or directories (`:h netrw-d`), rename existing ones (`:h netrw-rename`), or delete them (`:h netrw-del`).
+
+netrw can even read and write files across a network, using protocols including `scp` `ftp` `curl` and `wget`. Loop up `:h netrw-ref`.
