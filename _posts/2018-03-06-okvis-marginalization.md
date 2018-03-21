@@ -73,3 +73,74 @@ $$
   把一个 Residual 及其对应的 ParameterBlock 加入现有的 Marginalization 系统中，同时将其从 Map 中剔除。此后 Marginalization 系统会一直维持该 Residual 在加入 Marginalization 系统时的线性点（即 FEJ），直至其被重新线性化或从当前窗口中剔除。
 
 - `MarginalizationError::marginalizeOut()`
+
+
+
+
+### Temp log
+
+真的很烦，一旦真撸起这种工程逻辑，okvis 作者也就顾不上 OOP 了 :)
+
+---
+
+- `removeFrames`: states to remove (frame id, or oldest keyframe id)
+- `removeAllButPose`: all in marg window (frame id)
+- `allLinearizeFrames`: all in marg window (frame id)
+
+---
+
+_For those in_ `removeAllButPose`:
+
+- Put SpeedAndBias states to `parameterBlockToBeMarg`.
+- Add residuals concerning SpeedAndBias states to `marginalizationErrorPtr`. They are never ReprojectionError.
+
+_end For_
+
+---
+
+_For those in_ `removeFrames`:
+
+- Put Pose states to `parameterBlockToBeMarg`.
+- Get residuals concerning Pose states. 
+  - If a residual is PoseError, remove it from `mapPtr`;
+  - If not, add it to `marginalizationErrorPtr` -- in this case, it must be a ReprojectionError.
+
+- Put Extrinsics states to `parameterBlockToBeMarg`.
+- Add residuals concerning Extrinsics states to `marginalizationErrorPtr`. They are always ReprojectionError.
+
+_end For_
+
+---
+
+_For those in_ `landmarksMap_`:
+- Get residuals concerning the landmark
+
+  _For every residual_:
+  - must be a ReprojectionError.
+  - if the concerning Frame is in `removeFrames`, the landmark should not be skipped
+
+  _end For_
+
+  _If_ this landmark can be skipped, skip.
+
+  _For every residual_:
+  - get the concerning Frame
+
+    _If_ 
+    1. the concerning Frame is in `removeFrames` _And_ this landmark is observed by some Frame newer than the marg window, _Or_
+    2. the concerning Frame is not in `allLinearizeFrames` _And_ this landmark is not observed by some Frame newer than the marg window:
+
+    _then_
+ 
+    - remove the residual only
+
+    _Else if_ 
+    1. the concerning Frame is in `allLinearizeFrames` _And_ this landmark is not observed by some Frame newer than the marg window
+ 
+    _then_
+ 
+    - remove the residual only
+
+
+
+
