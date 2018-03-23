@@ -26,8 +26,7 @@ __目录__
 主要涉及源文件：
 
 ```
-okvis/kinematics/Transformation.hpp
-okvis/kinematics/implementation/Transformation.hpp
+okvis_kinematics/include/okvis/kinematics/Transformation.hpp
 ```
 
 OKVIS 的 `Trawnsformation` 类实现了 SE3 变换。
@@ -119,8 +118,8 @@ inline bool Transformation::liftJacobian(const Eigen::MatrixBase<Derived_jacobia
 主要涉及源文件：
 
 ```
-okvis/ceres/PoseLocalParameterization.hpp
-PoseLocalParameterization.cpp
+okvis_ceres/include/okvis/ceres/PoseLocalParameterization.hpp
+okvis_ceres/src/PoseLocalParameterization.cpp
 ```
 
 基于 `Transformation` 类，OKVIS 实现了用于 Ceres 优化的局部位姿参数类 `PoseLocalParameterization`。群的参数排列顺序为：
