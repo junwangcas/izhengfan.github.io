@@ -3,7 +3,7 @@ layout: cnmath
 title: "OKVIS 笔记：位姿变换及其局部参数类"
 date: 2018-01-23 01:00:00
 categories: cn
-tags: robotics VIO SLAM OKVIS
+tags: [robotics, VIO, SLAM, OKVIS, Ceres Solver]
 ---
 
 > OKVIS 系列文章：
