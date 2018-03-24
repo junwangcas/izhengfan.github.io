@@ -6,10 +6,11 @@ categories: en
 tags: Vim
 ---
 
-> Notes on _Practical Vim_ by D. Neil:
+> Series notes on _Practical Vim_ by D. Neil:
 > - Practical Vim: Modes
 > - [Practical Vim: Files](/2018/03/19/practical-vim-files)
 > - [Practical Vim: Getting Around Faster](/2018/03/20/practical-vim-getting-around-faster)
+> - [Practical Vim: Registers](/2018/03/24/practical-vim-registers)
 
 __Contents__
 
