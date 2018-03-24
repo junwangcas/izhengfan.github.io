@@ -6,11 +6,15 @@ categories: en
 tags: Vim
 ---
 
+> Notes on _Practical Vim_ by D. Neil:
+> - [Practical Vim: Modes](/2018/03/17/practical-vim-modes/)
+> - Practical Vim: Files
+> - [Practical Vim: Getting Around Faster](/2018/03/20/practical-vim-getting-around-faster)
+
+__Contents__
 
 * content
 {:toc}
-
-> What's this: notes on _Practical Vim_ by D. Neil.
 
 ## Chap 6 - Manage Multiple Files
 

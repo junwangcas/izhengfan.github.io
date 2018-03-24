@@ -6,10 +6,15 @@ categories: en
 tags: Vim
 ---
 
+> Notes on _Practical Vim_ by D. Neil:
+> - [Practical Vim: Modes](/2018/03/17/practical-vim-modes/)
+> - [Practical Vim: Files](/2018/03/19/practical-vim-files)
+> - Practical Vim: Getting Around Faster
+
+__Contents__
+
 * content
 {:toc}
-
-> What's this: notes on _Practical Vim_ by D. Neil.
 
 ## Chap 8 - Navigate Inside Files with Motions
 
@@ -127,7 +132,7 @@ __Automatic Marks:__
 | `` `. ``        | location of last change                           |
 | `` `^ ``        | location of last insertion                        |
 | `` `[ ``        | start of last change or yank                      |
-| `` `] ``        | end of last change of yank                        |
+| `` `] ``        | end of last change or yank                        |
 | `` `< ``        | start of last visual selection                    |
 | `` `> ``        | end of last visual selection                      |
 
@@ -151,3 +156,59 @@ Another good plugin is _Surround.vim_. Visually select some characters, and `S"`
 `S)` `S}` work similarly.
 Changing existing delimiters is also possible: `cs}]` would change `{London}` to `[London]`.
 _Surround.vim_ should be mannually [installed](https://github.com/tpope/vim-surround).
+
+## Chap 9 - Navigate Between Files with Jumps
+
+### Tip 55: Traverse the Jump List
+
+`:jump`: show the jump list
+
+`<C-o>`: jump back
+
+`<C-i>`: jump forward
+
+| Command                                | Effect                                         |
+|----------------------------------------|------------------------------------------------|
+| `[count]G`                             | jump to line number                            |
+| //pattern`<CR>`/?pattern`<CR>`/`n`/`N` | jump to next/previous occurrence of pattern    |
+| `%`                                    | jump to matching parentheses                   |
+| `(`/`)`                                | jump to start of previous/next sentence        |
+| `{`/`}`                                | jump to start of previous/next paragraph       |
+| `H`/`M`/`L`                            | jump to top/middle/bottom of screen            |
+| `gf`                                   | jump to file name under the cursor             |
+| `<C-]>`                                | jump to definition of keyword under the cursor |
+| `'{mark}`/`` `{mark}``                 | jump to a mark                                 |
+
+### Tip 56: Traverse the Change List
+
+`:changes`: show the change list
+
+`g;`: traverse backward in the change list
+
+`g,`: traverse forward in the change list
+
+`` `.``: mark to the position of the last change
+
+`` `^``: mark to the position of the cursor the last time Insert mode was stopped
+
+`gi`: use `` `^`` to restore the cursor position, and then switch to Insert mode
+
+
+### Tip 57: Jump to the Filename Under the Cursor
+
+`gf`: jump to the filename under the cursor
+
+`:set suffixesadd+=.rb`: tell Vim to find filenames with `.rb` extension.
+Note that common file-type extensions are automatically handled in most modern Vim distributions.
+
+`:set path?`: inspect the value of `path`
+
+### Tip 58: Snap Between Files Using Global Marks
+
+`m{letter}`: create a mark at the current cursor position.
+Lowercase letters work locally in a buffer;
+Uppercases are global.
+
+`:vimgrep /{pattern}/ {files}` can search and jump in files.
+Set a global mark before diving with `:vimgrep`.
+

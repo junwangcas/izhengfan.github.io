@@ -6,10 +6,16 @@ categories: en
 tags: Vim
 ---
 
+> Notes on _Practical Vim_ by D. Neil:
+> - Practical Vim: Modes
+> - [Practical Vim: Files](/2018/03/19/practical-vim-files)
+> - [Practical Vim: Getting Around Faster](/2018/03/20/practical-vim-getting-around-faster)
+
+__Contents__
+
 * content
 {:toc}
 
-> What's this: notes on _Practical Vim_ by D. Neil.
 
 ## Chap 1 - The Vim Way
 
