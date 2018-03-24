@@ -215,13 +215,13 @@ For this task we use a variable and increment it, which would look like:
 
 Specifically, 1) record the macro:
 
-| Keystrokes             | Effect                                                 |
-|------------------------|--------------------------------------------------------|
-| `:let i=1`             | declare the variable                                   |
-| `qa`                   | begin recording                                        |
-| `I<C-r>=`i`<CR>`)<Esc> | insert to the line beginning, getting the value of `i` |
-| `:let i += 1`          | increment `i`                                          |
-| `q`                    | stop recording                                         |
+| Keystrokes               | Effect                                                 |
+|--------------------------|--------------------------------------------------------|
+| `:let i=1`               | declare the variable                                   |
+| `qa`                     | begin recording                                        |
+| `I<C-r>=`i`<CR>`)`<Esc>` | insert to the line beginning, getting the value of `i` |
+| `:let i += 1`            | increment `i`                                          |
+| `q`                      | stop recording                                         |
 
 2) execute the macro:
 
