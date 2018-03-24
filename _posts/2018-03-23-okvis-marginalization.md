@@ -3,7 +3,7 @@ layout: cnmath
 title: "OKVIS 笔记：边缘化实现"
 date: 2018-03-23 01:00:00
 categories: cn
-tags: robotics VIO SLAM OKVIS
+tags: [robotics, VIO, SLAM, OKVIS, Ceres Solver]
 ---
 
 > OKVIS 系列文章：
