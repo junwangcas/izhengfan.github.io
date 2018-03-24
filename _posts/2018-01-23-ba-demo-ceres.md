@@ -31,7 +31,7 @@ For a similar demo with g2o, another popular graph optimization library, please 
 
 Project repo: [izhengfan/ba_demo_ceres](https://github.com/izhengfan/ba_demo_ceres).
 
-This project implements a simple bundle adjustment problem using Cere Solver. 
+This project implements a simple bundle adjustment problem using Ceres Solver. 
 
 The constraints are defined with customized cost functions and self-defined Jacobians.
 In Ceres Solver, this can be achieved by inheriting the `ceres::SizedCostFunction` class,
