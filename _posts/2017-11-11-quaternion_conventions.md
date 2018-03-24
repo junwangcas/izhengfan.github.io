@@ -42,6 +42,10 @@ Joan Sola 在另一篇报告 _Quaternion kinematics for the error-state KF_ [\[6
 
 __2018-03-19 更新__: 经查证，维基百科条目 \[4\] 只是声称使用了 JPL，实际公式用的还是 Hamilton…… 不知道为什么会出现这种错误。感谢 [Hannes](https://github.com/HannesSommer) 向我指出了这个问题。
 
+此外，Hannes 还写了一篇论文，对此问题进行了更详尽的追根溯源，并给出实践上的合理倡议。
+论文放在 [arxiv](https://arxiv.org/abs/1801.07478) 上。
+也可以在 [ResearchGate](https://www.researchgate.net/publication/323426570_Why_and_How_to_Avoid_the_Flipped_Quaternion_Multiplication_-_Shorter_and_Less_Formal_Version) 上获取其精简版。
+
 
 ### 参考文献:
 

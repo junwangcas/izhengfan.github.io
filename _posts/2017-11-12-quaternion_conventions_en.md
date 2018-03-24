@@ -38,6 +38,9 @@ My personal opinion: the current situation of two quaternion conventions co-exis
 
 __Updated 2018-03-19__: As for the Wikipedia entry \[4\], after confirmation, it actually just claims to use JPL, but still uses Hamilton throughout the equations... Don't know why someone just added this mismatched claim. Thanks to [Hannes](https://github.com/HannesSommer) for reminding me of this case.
 
+Moreover, Hannes wrote a paper on this problem with more extensive historical investigation and implementation suggestions.
+Read his paper on [arxiv](https://arxiv.org/abs/1801.07478).
+A shorter version is also available at [ResearchGate](https://www.researchgate.net/publication/323426570_Why_and_How_to_Avoid_the_Flipped_Quaternion_Multiplication_-_Shorter_and_Less_Formal_Version).
 
 ### References:
 
