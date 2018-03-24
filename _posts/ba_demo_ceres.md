@@ -1,16 +1,27 @@
-On-Manifold Optimization using Ceres Solver: A Bundle Adjustment Demo
+---
+layout: post 
+title: "On-Manifold Optimization using Ceres Solver: A Bundle Adjustment Demo"
+date: 2018-01-23 01:00:00
+categories: en
+tags: [robotics, SLAM, Ceres Solver]
+---
 
-### On-Manifold Optimization
+### Introduction 
 
 Ceres Solver is a C++ library by Google for solving least-square optimization problems, providing a variety of functions and options for different types of problems.
 
-Optimization problems on Euclidean-space states are common, and can be solved using a standardized workflow. States are incremented automatically by addition, and Jacobians of error functions w.r.t. to the states can be calculated using the built-in auto-diff utility, both of which are handled by the solver, and users need not worry about them. However, in many application, such as the bundle adjustment (BA) problem in computer vision, the camera poses are non-Eucliean, and lies in the SE(3) manifold, which requires on-manifold optimization techniques. 
+Optimization problems on Euclidean-space states are common, and can be solved using a standardized workflow. 
+States are incremented automatically by addition, and Jacobians of error functions w.r.t. to the states can be calculated using the built-in auto-diff utility, 
+both of which are handled by the solver, and users need not worry about them.
+However, in many applications, such as the bundle adjustment (BA) problem in computer vision, the camera poses are non-Eucliean, and lie in the SE(3) manifold, which requires on-manifold optimization techniques. 
+
+Here we demonstrate a demo project on solving on-manifold graph optimization with Ceres Solver. 
+For a similar demo with g2o, another popular graph optimization library, please read [SLAM Implementation: Bundle Adjustment with g2o](/2016/03/15/g2o-demo/).
 
 ### Dependencies
 
 - Ceres Solver
 
-### Introduction 
 
 This project implements a simple bundle adjustment problem using Cere Solver to solve it. 
 
