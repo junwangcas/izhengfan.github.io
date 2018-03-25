@@ -79,9 +79,9 @@ $$
 
 ### 主要接口和函数
 
-#### marginalizationerror::addresidualblock()
+#### MarginalizationError::addResidualBlock()
 
-`marginalizationerror::addresidualblock()`
+`MarginalizationError::addResidualBlock()`
 把一个 Residual 及其对应的 ParameterBlock 加入现有的 Marginalization 系统（即 `MarginalizationError` 类中封装的 H-b 系统）中，同时将其从 Map 中剔除。
 此后 Marginalization 系统会一直维持该 Residual 在加入 Marginalization 系统时的线性点（即 FEJ），直至其被重新线性化或从当前窗口中剔除。
 
@@ -342,9 +342,14 @@ if (jacobians != NULL) {
 Declare:
 
 - `removeFrames`: states to remove (frame id, or oldest keyframe id)
+
 - `removeAllButPose`: all in marg window (frame id)
+
 - `allLinearizeFrames`: all in marg window (frame id)
 
+  `removeFrames` contains $\rm x^{c-S}$ or $\rm x^{k_1}$.
+  The newest one in `allLinearizeFrames` / `removeAllButPose` is $\rm x^{c-S}$.
+  Check the [strategy](/2018/03/22/okvis-marginalization-base/#okvis-边缘化策略).
 
 _For each in_ `removeAllButPose`:
 
@@ -381,7 +386,7 @@ _For each in_ `removeFrames`:
     - `marginalize` = true, indicating if this landmark should be marg
     - `errorTermAdded` = false
 
-    _If_ this landmark has connected Frames newer than the marg window: 
+    _If_ this landmark is connected to $\rm x^{c-S}$ or newer Frames:
 
     - set `marginalize` false
 

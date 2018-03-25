@@ -129,12 +129,15 @@ $$
 当不断有新的 Frame 加进来，或是普通 Frame，或是 Keyframe，就需要移除掉一些 Frame 或 Keyframe，
 保持 _S_ 和 _M_ 的数目不变。
 
-边缘化一开始时，旧的 _M_ 个 Keyframe 都处在 marginalization window 中，先 marg 掉它们的 speed/Bias 项，如下图所示：
+边缘化一开始时，旧的 _M_ 个 Keyframe 都处在 marginalization window 中
+（marg window 中最末还有第 _M+1_ 个 Frame，稍后可能被 marg 掉），
+先 marg 掉它们的 speed/Bias 项，如下图所示：
 
 ![okvis-f7](http://img.blog.csdn.net/20161127225423726)
 
 当新进来一个 Frame 时，记为 $\rm x^c$；
-这时，如果 $\rm x^{c-S}$ 帧不是 Keyframe，这意味着 temporal window 中的普通 Frame 多了一帧，
+这时，$\rm x^{c-S}$ 帧既是既有 marg window 的最后一帧，又是 temporal window 中的最先一帧；
+如果它不是 Keyframe，这意味着 temporal window 中的普通 Frame 多了一帧，
 于是 marg 掉 $\rm x^{c-S}$，如下图：
 
 ![okvis-f8](http://img.blog.csdn.net/20161127225438250)
@@ -147,8 +150,10 @@ $$
 
 ![okvis-f9](http://img.blog.csdn.net/20161127225456110)
 
-同时，会把被 $\rm x^{k_1}$ 观测到、且不被最新的 Keyframe 或最新 Keyframe 之后的 Frame 观测到的 landmark 也 marg 掉。
+同时，会把被 $\rm x^{k_1}$ 观测到、且不被 $\rm x^{c-S}$ 或 $\rm x^{c-S}$ 之后的 Frame 观测到的 landmark 也 marg 掉。
 当然，$\rm x^{k_1}$ 对不会被 marg 的 landmark 的 observation 项也要在 marginalization 前丢掉，避免 fill-in。
+
+当有一帧被 marg 掉，marg window 就往后扩容一帧，保持边缘化窗口大小始终一致，如上面 Fig 8、Fig 9 两图所示。
 
 边缘化策略的代码实现，见《[边缘化实现](/2018/03/23/okvis-marginalization/)》一文，
 尤其是 `applyMarginalizationStrategy()` 函数。
