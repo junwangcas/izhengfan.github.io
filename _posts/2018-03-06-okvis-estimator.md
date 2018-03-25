@@ -8,6 +8,7 @@ tags: [robotics, VIO, SLAM, OKVIS, Ceres Solver]
 
 > OKVIS 系列文章：
 > - [OKVIS 笔记：位姿变换及其局部参数类](/2018/01/23/okvis-transformation)
+> - [OKVIS 笔记：后端状态量参数结构](/2018/01/23/okvis-ceres-parameter)
 > - OKVIS 笔记：后端架构简述
 > - [OKVIS 笔记：边缘化原理和策略](/2018/03/22/okvis-marginalization-base)
 > - [OKVIS 笔记：边缘化实现](/2018/03/23/okvis-marginalization)
