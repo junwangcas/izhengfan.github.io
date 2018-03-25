@@ -185,9 +185,9 @@ members 多了一个时间戳。
 
 ### 小结
 
-第一层：`ParameterBlock.hpp` 为不包括状态估计数据的基础抽象类；
+第一层：`ParameterBlock` 为不包括状态估计数据的基础抽象类；
 
-第二层：`ParameterBlockSized.hpp` 为包括状态估计数据的固定维度的基础类；
+第二层：`ParameterBlockSized` 为包括状态估计数据的固定维度的基础类；
 
-第三层：`PoseParameterBlock.hpp` `HomogeneousPointParameterBlock.hpp` `SpeedAndBiasParameterBlock.hpp`
+第三层：`PoseParameterBlock` `HomogeneousPointParameterBlock` `SpeedAndBiasParameterBlock`
 为针对不同种类状态量的具体实现。
