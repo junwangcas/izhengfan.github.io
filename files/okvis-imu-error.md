@@ -95,6 +95,8 @@ Here
 
 - $\int_a$ corresponds to $\Delta \tilde{v}_{ij}$ in Preintegration;
 - $\iint_a$ correctness to $\Delta \tilde{p}_{ij}$ in Preintegration.
+- $\int_C$ correctness to $-\frac{\partial \Delta \bar{v}_{ij}}{\partial b_a}$ in Preintegration.
+- $\iint_C$ correctness to $-\frac{\partial \Delta \bar{p}_{ij}}{\partial b_a}$ in Preintegration.
 
 Note that the calculation of $\frac{d \alpha}{db_g}$ in the code drops a minus symbol,
 so an extra minus symbol appears in $\Delta\tilde{q}$ above.
