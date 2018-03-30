@@ -2,7 +2,10 @@
 title: OKVIS ImuError
 author: ZHENG, Fan {fzheng@link.cuhk.edu.hk}
 date: 2018-03-28
+layout: math
 ---
+
+> Must pre-read: [OKVIS IMU Error](https://blog.csdn.net/fuxingyin/article/details/53449209) by Xingyin Fu
 
 ## States
 
