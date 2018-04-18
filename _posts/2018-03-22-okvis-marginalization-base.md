@@ -134,14 +134,14 @@ $$
 （marg window 中最末还有第 _M+1_ 个 Frame，稍后可能被 marg 掉），
 先 marg 掉它们的 speed/Bias 项，如下图所示：
 
-![okvis-f7](http://img.blog.csdn.net/20161127225423726)
+![okvis-f7](https://user-images.githubusercontent.com/8697363/38910830-f5b88f4c-42fd-11e8-90b1-f9a0d786368f.png)
 
 当新进来一个 Frame 时，记为 $\rm x^c$；
 这时，$\rm x^{c-S}$ 帧既是既有 marg window 的最后一帧，又是 temporal window 中的最先一帧；
 如果它不是 Keyframe，这意味着 temporal window 中的普通 Frame 多了一帧，
 于是 marg 掉 $\rm x^{c-S}$，如下图：
 
-![okvis-f8](http://img.blog.csdn.net/20161127225438250)
+![okvis-f8](https://user-images.githubusercontent.com/8697363/38910831-f5e2e760-42fd-11e8-9c65-c2d9dce89b7d.png)
 
 这种情况下不会有 landmark 被 marg 掉。
 不过，与 $\rm x^{c-S}$ 相关的 observation 需要丢掉，
@@ -149,7 +149,7 @@ $$
 
 如果 $\rm x^{c-S}$ 是 Keyframe，新的 Keyframe 不宜被 marg，于是就 marg 最老的一帧 Keyframe $\rm x^{k_1}$，如下图：
 
-![okvis-f9](http://img.blog.csdn.net/20161127225456110)
+![okvis-f9](https://user-images.githubusercontent.com/8697363/38910832-f60ca866-42fd-11e8-81ad-22d9a720e0d1.png)
 
 同时，会把被 $\rm x^{k_1}$ 观测到、且不被 $\rm x^{c-S}$ 或 $\rm x^{c-S}$ 之后的 Frame 观测到的 landmark 也 marg 掉。
 当然，$\rm x^{k_1}$ 对不会被 marg 的 landmark 的 observation 项也要在 marginalization 前丢掉，避免 fill-in。
