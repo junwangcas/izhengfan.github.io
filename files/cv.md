@@ -95,4 +95,4 @@ Conference Papers
 
 - Languages: Mandarin Chinese, Teochew (native); English, Cantonese (fluent)
 - Programming: C++ (Qt, ROS, OpenCV, Eigen, g2o, Ceres Solver), Python, MATLAB
-- Softwares: MS Office, SolidWorks; Bash, Vim, LaTeX, CMake, GDB
+- Softwares: MS Office, SolidWorks; Bash, Vim, LaTeX, CMake, GDB, Git, Jekyll
