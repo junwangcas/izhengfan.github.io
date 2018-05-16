@@ -91,3 +91,8 @@ Conference Papers
 - Top-8 Team in 2014 RoboCup, Humanoid Kidsize \hfill 2014
 - Hong Kong PhD Fellowship \hfill 2014
 
+### Skills
+
+- Languages: Mandarin Chinese, Teochew (native); English, Cantonese (fluent)
+- Programming: C++ (Qt, ROS, OpenCV, Eigen, g2o, Ceres Solver), Python, MATLAB
+- Softwares: MS Office, SolidWorks; Bash, Vim, LaTeX, CMake, GDB
