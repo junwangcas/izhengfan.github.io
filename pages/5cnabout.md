@@ -15,7 +15,7 @@ permalink: /cnabout/
 邮箱：[fzheng@link.cuhk.edu.hk](mailto:fzheng@link.cuhk.edu.hk)
 
 
-个人简历：[PDF](/files/CV2016.pdf)
+个人简历：[PDF](/files/CV2018.pdf)
 
 ### 简介
 
@@ -34,10 +34,12 @@ permalink: /cnabout/
 
 期刊
 
+* __F. Zheng__, H. Tang, Y.-H. Liu. _Odometry-Vision-Based Ground Vehicle Motion Estimation With SE(2)-Constrained SE(3) Poses_. IEEE Transactions on Cybernetics, 2018. \[[DOI](https://doi.org/10.1109/TCYB.2018.2831900)\]
+
 会议
 
-* __F. Zheng__, Y.-H. Liu. _A Geometric Model for Fusing IMU into Monocular Visual Localization of 3-D Mobile Robots._ IEEE International Conference on Real-time Computing and Robotics, 2016. [<a>accepted</a>]
-* Lu Y, Liu Y, Wang Z, __Zheng F__. _Lens-free And Portable Quantitative Phase Microscope Using A Dual-pinhole Aperture._ International Symposium on Optomechatronic Technologies. International Society for Optics and Photonics, 2015. \[[doi](http://dx.doi.org/10.1051/matecconf/20153204002)\]
+* __F. Zheng__, Y.-H. Liu. _A Geometric Model for Fusing IMU into Monocular Visual Localization of 3-D Mobile Robots._ IEEE International Conference on Real-time Computing and Robotics, 2016. \[[DOI](https://doi.org/10.1109/RCAR.2016.7784043)\]
+* Lu Y, Liu Y, Wang Z, __Zheng F__. _Lens-free And Portable Quantitative Phase Microscope Using A Dual-pinhole Aperture._ International Symposium on Optomechatronic Technologies. International Society for Optics and Photonics, 2015. \[[DOI](https://doi.org/10.1051/matecconf/20153204002)\]
 
 ### 工作经历
 
@@ -47,7 +49,7 @@ permalink: /cnabout/
 ### 教学
 
 2015/2016	|  MAEG 5755 Robotics 助教
-2014/2015   |  MAEG 4050 Modern Control and Theory 助教 
+2014/2015   |  MAEG 4050 Modern Control and Theory 助教
 2014/2015   |  MAEG 3010 Mechanics of Materials 助教
 
 ### 荣誉
@@ -65,9 +67,9 @@ permalink: /cnabout/
 
 ### 链接
 
-个人：[Github](https://github.com/izhengfan) \| [知乎](http://www.zhihu.com/people/izhengfan) 
+个人：[Github](https://github.com/izhengfan) \| [知乎](http://www.zhihu.com/people/izhengfan)
 
-师友：[刘云辉教授](http://www.mae.cuhk.edu.hk/people/list.php?name=yhliu) \| 
+师友：[刘云辉教授](http://www.mae.cuhk.edu.hk/people/list.php?name=yhliu) \|
 [David](http://www.mypolyuweb.hk/dnavar/) \| [鲁豫杰](http://www.mae.cuhk.edu.hk/~yjlu/) \| [王泽睿](http://www.wangzerui.com)
 
 网站设计：[高浩阳](http://gaohaoyang.github.io/) \| [谢益辉](http://yihui.name/cn/)
