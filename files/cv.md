@@ -16,7 +16,7 @@ Supervisor: Prof. LIU, Yun-hui \newline
 Co-Supervisors: Prof. NAVARRO ALARCON, David & Prof. WANG, Zerui \newline
 Phone: (852) 3943 8056 \newline
 Email: [fzheng@link.cuhk.edu.hk](mailto:fzheng@link.cuhk.edu.hk) \newline
-Homapage: [fzheng.me](http://fzheng.me)
+Homepage: [fzheng.me](http://fzheng.me)
 
 ### Education
 
@@ -34,7 +34,7 @@ Zhejiang University
 
 - Our team, _ZJUDANCER_, develops kid-size humanoid football player robots
 - My work is to design robot mechanical structure, build 3D model in SolidWorks, draw
-machining drawings and contact with manufacturers for parts manufactory, assemble and
+machining drawings and contact with manufacturers for parts manufacturing, assemble and
 maintain the robots. I’m the mechanical group leader in 2013-2014
 - Championship in 2013 RoboCup China; Top 8 in 2014 RoboCup in Brazil
 
@@ -45,10 +45,10 @@ Zhejiang University
 precisely move the stimulator tip to execute test work of required motion on tactile sensors
 - I worked on both the hardware and software development of the platform
 
-_Visual Estimation for Ground Vehicles_ \hfill 2014-201? \newline
+_Visual Motion Estimation for Ground Vehicles_ \hfill 2014-201? \newline
 The Chinese University of Hong Kong
 
-- My PhD thesis topic is to develop a robust odometry/IMU assisted visual SLAM system for
+- My PhD thesis topic is to develop a robust odometry/IMU assisted visual motion estimation system for
 navigation of ground vehicles
 
 
