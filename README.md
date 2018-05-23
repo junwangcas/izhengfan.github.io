@@ -16,10 +16,11 @@ At first I used the template of [Gao Haoyang](https://github.com/Gaohaoyang/gaoh
 
 ---
 
-### Site update log 
- Date | Event   
+### Site update log
+ Date | Event
 --- | ---
-2015.07 | Launch of my personal domain [fzheng.me](http://fzheng.me). 
-2015.07 | Totally update the theme from dark style to plain light style.   
-2015.07 | Foundation of the blog structure. Also use Github Pages. Thanks to Haoyang's [template](https://github.com/Gaohaoyang/gaohaoyang.github.io).    
-2015.03	| Foundation of my [homepage](https://izhengfan.github.io) maintained in Github Pages. 
+2018.05 | Upgrade to HTTPS support thanks to Github Pages' [new feature](https://blog.github.com/2018-05-01-github-pages-custom-domains-https/)
+2015.07 | Launch of my personal domain [fzheng.me](http://fzheng.me).
+2015.07 | Totally update the theme from dark style to plain light style.
+2015.07 | Foundation of the blog structure. Also use Github Pages. Thanks to Haoyang's [template](https://github.com/Gaohaoyang/gaohaoyang.github.io).
+2015.03	| Foundation of my [homepage](https://izhengfan.github.io) maintained in Github Pages.
