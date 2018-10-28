@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Fan's Farm
+title: Jun's Farm
 ---
 
 <article>
 <blockquote><p> 
-A researcher on robotics and computer vision. Interested in programming and typography. A fan of Golden State Warriors and Stephen Curry.
+A researcher on robotics and computer vision. Interested in AR and Autonomous driving. A fan of Argentina football team and Aamir Khan.
 </p></blockquote>
 </article>
 
