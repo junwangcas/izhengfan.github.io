@@ -8,9 +8,9 @@ margin-bottom: 5em
 
 \pagenumbering{gobble}
 
-## ZHENG Fan 郑帆
+## WANG Jun 王俊
 
-PhD candidate \newline
+Ph.D \newline
 Mechanical and Automation Engineering, The Chinese University of Hong Kong \newline
 Supervisor: Prof. LIU, Yun-hui \newline
 Co-Supervisors: Prof. NAVARRO ALARCON, David & Prof. WANG, Zerui \newline
