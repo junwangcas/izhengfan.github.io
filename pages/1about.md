@@ -4,61 +4,46 @@ title: About
 permalink: /about/
 ---
 
-### ZHENG Fan 郑帆
+### Wang Jun 王俊
 
-PhD Candidate
-
-Rm 106, William MW Mong Engineering Building<br>
-Dept. of Mechanical and Automation Engineering<br>
-The Chinese University of Hong Kong <br>
-Shatin, N.T., Hong Kong
-
-Email: [fzheng@link.cuhk.edu.hk](mailto:fzheng@link.cuhk.edu.hk)
-
-View my [CV](/files/CV2018.pdf).
+PhD <br />
+Email: [junwangcas@gmail.com](mailto:junwangcas@gmail.com)<br />
+View my [CV](/files/CV2018_Jun.pdf).
 
 ### Introduction
 
-I'm pursuing PhD in [MAE CUHK](http://www.mae.cuhk.edu.hk) supervised by [Prof LIU Yun-Hui](http://www.mae.cuhk.edu.hk/people/list.php?name=yhliu). Before coming to CUHK, I received my B. Eng degree in Mechatronic Engineering in Zhejiang University.
+My research interests are visual SLAM, Computer Vision, Navigation, and Virtual Reality. <br />
 
-My research interest includes visual SLAM, vision-based navigation of mobile robots, and visual inertial odometry.
+I swim and run a lot. I am a fan of Argentina football team and Aamir Khan.<br />
 
-
-I swim and jog. I am a fan of Golden State Warriors and Stephen Curry.
-
-Comment or leave a message via [Github Issues](https://github.com/izhengfan/izhengfan.github.io/issues).
+Comment or leave a message via [Github Issues](https://github.com/junwangcas/junwangcas.github.io/issues).
 
 ### Publication
 
 Journal Papers
-
-* __F. Zheng__, H. Tang, Y.-H. Liu. _Odometry-Vision-Based Ground Vehicle Motion Estimation With SE(2)-Constrained SE(3) Poses_. IEEE Transactions on Cybernetics, 2018. \[[DOI](https://doi.org/10.1109/TCYB.2018.2831900)\]
+* __Jun. Wang__, J. Song, M. Chen, and Z. Yang, “Road network extraction: A neural-dynamic framework based on deep learning and a Finite state machine,” International Journal of Remote Sensing, vol. 36, no. 12, pp. 3144-3169, 2015.
+* __Jun. Wang__. Liu Yuan and S. J. et al, “Globally consistent indoor mapping via a decoupling rotation and translation algorithm applied to rgb-d camera output,” ISPRS International Journal of Geo-Information (Corresponding author), 2017.
+* Wang F, Pan D J, __Jun. Wang__. , “Dynamic dispatching and organization of massive data of urban 3d model,” Journal of University of Chinese Academy of Sciences, vol. 32, no. 3, pp. 409-415, 2015.
+* __Jun. Wang__, J. Song, L. Zhao, and S. Huang, Rong Xiong, "A Submap Joining Algorithm for 3D Reconstruction using an RGB-D Camera based on Point and Plane Features", Robotics and Autonomous Systems. Under review
 
 Conference Papers
+* __Jun. Wang__, J. Song, L. Zhao, and S. Huang, “A submap joining based rgb-d slam algorithm using planes as features,” in The 11th Intl. Conf. on Field and Service Robotics (FSR),Zurich, Switzerland, ETH, 2017.
+* J. Song, Z. L. __Jun. Wang__, S. Huang, and G. Dissanayake, “Dynamic reconstruction of deformable soft-tissue with stereo scope in minimal invasive surgery,” IEEE Robotics and Automation Letters appear on IROS, 2017.
+* __Jun. Wang__, Z. L. Song, Jingwei, and S. Huang, “A submap joining algorithm for 3d reconstruction using a rgb-d camera based on point and plane features,” Journal of Photogrammetry and Remote Sensing,Under review, top 1 in Photogrammetry.
+* J. Song, __Jun. Wang__, and D. G. et al., “Robust shape recovery of deformable soft-tissue based on information from stereo scope for minimal invasive surgery,” in Hamlyn Symposium on Medical Robotics 2017.
+* J. Song, __Jun. Wang__, L. Zhao, S. Huang, and G. Dissanayake, “3d shape recovery of deformable soft-tissue with computed tomography and depth scan,” in Australasian Conference on Robotics and Automation (ACRA), ARAA, 2016.
+* __Jun. Wang__, S. Huang, L. Zhao, and X. Wang, “High quality 3d reconstruction of indoor environments using rgb-d sensors,” in Industrial Electronics and Applications (ICIEA), 2017 IEEE 12th Conference on, pp. 1288-1293, IEEE, 2017.
+* J. Xu, Y. Koua, and __Jun. Wang__, “High-precision dem reconstruction based on airborne lidar point clouds,” in Remote Sensing of the Environment: 18th National Symposium on Remote Sensing of China, pp. 915808- 915808, International Society for Optics and Photonics, 2014.
+* H. S. Jingwei Song, __Jun. Wang__ and D. G. et al., “Deformable soft-tissue reconstruction using stereo scope for minimal invasive surgery,” in CARS 2017-Computer Assisted Radiology and Surgery, 31st International Congress and Exhibition, 2017.
 
-* __F. Zheng__, Y.-H. Liu. _A Geometric Model for Fusing IMU into Monocular Visual Localization of 3-D Mobile Robots._ IEEE International Conference on Real-time Computing and Robotics, 2016. \[[DOI](https://doi.org/10.1109/RCAR.2016.7784043)\]
-* Lu Y, Liu Y, Wang Z, __Zheng F__. _Lens-free And Portable Quantitative Phase Microscope Using A Dual-pinhole Aperture._ International Symposium on Optomechatronic Technologies. International Society for Optics and Photonics, 2015. \[[DOI](https://doi.org/10.1051/matecconf/20153204002)\]
+### Education
+2012  |  Graduate from Wuhan University, __Bachelor__ <br />
+2018  |  Graduate from Chinese Academy of Sciences, __Doctor__ <br />
+2018  |  Joint PhD program at University of Technology, Sydney, __Doctor__
 
 
 ### Working Experience
 
-2013 |  Intern in deburring robot development, __Atlas Copco (Wuxi)__
+2015 |  Develop SLAM algorithm for low-cost service robots, __Intern in Intel (Beijing)__<br />
+2018 |  Autonomous Driving, __Baidu(Beijing)__<br />
 
-### Teaching
-
-2015/2016	|  TA, MAEG 5755 Robotics
-2014/2015   |  TA, MAEG 4050 Modern Control and Theory
-2014/2015   |  TA, MAEG 3010 Mechanics of Materials
-
-### Honors
-
-2014	| Hong Kong PhD Fellowship
-2014	| Top-8 Team in 2014 RoboCup, Humanoid Kidsize
-2013	| Championship in 2013 RoboCup China, Humanoid Kidsize
-2012	| National Scholarship
-
-### Others
-
-Links to my friends: [David](http://www.mypolyuweb.hk/dnavar/) \| [LU Yujie](http://www.mae.cuhk.edu.hk/~yjlu/) \| [WANG Zerui](http://www.wangzerui.com)
-
-This site is built with [Jekyll](http://jekyllrb.com/) hosted on Github, and the blog structure is based on the template [GAO Haoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io).
